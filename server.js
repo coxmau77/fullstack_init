@@ -26,7 +26,7 @@ app.get('/', (req, res) => {
 mongoose.connect(DB_URI).
     then(() => {
         app.listen(PORT, () => {
-            console.log(`*************************************************\n Servidor en ejecución en http://localhost:${PORT} \n*************************************************`);
+            console.log(`*************************************************\n Servidor en ejecución en http://localhost:${PORT} y conexión a la base de datos. \n*************************************************`);
         });
     })
     .catch(error => console.log(error));
