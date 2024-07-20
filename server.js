@@ -5,6 +5,8 @@ import express from 'express';
 import mongoose from 'mongoose';
 import path from 'path';
 import dotenv from 'dotenv';
+import authRoutes from './src/routes/auth.route.js';
+import bodyParser from 'body-parser';
 
 // Cargar las variables de entorno
 dotenv.config();
@@ -21,6 +23,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', (request, response) => {
     response.sendFile(path.join(__dirname, 'public/index.html'));
 });
+
+app.use(bodyParser.json());
+app.use('/api/auth', authRoutes);
 
 // Conectar a la base de datos MongoDB y al servidor
 mongoose.connect(DB_URI).

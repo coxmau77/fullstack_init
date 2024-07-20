@@ -53,7 +53,7 @@
             <button type="button" id="closeLoginDialog">Cancelar</button>
         </form>
     </dialog>
-    
+
     <!-- Signup Dialog -->
     <dialog id="signupDialog">
         <form method="dialog" id="signupForm">
@@ -68,10 +68,16 @@
             <input type="password" id="signupPassword" required>
             <label for="signupConfirmPassword">Repetir Contraseña:</label>
             <input type="password" id="signupConfirmPassword" required>
+            <label for="terms">Aceptar términos y condiciones</label>
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="rememberMe">Recordar datos de inicio</label>
+            <input type="checkbox" id="rememberMe" name="rememberMe">
             <button type="submit">Registrarse</button>
             <button type="button" id="closeSignupDialog">Cancelar</button>
         </form>
     </dialog>
+
+    <script type="module" src="../assets/js/signup.js"></script>
 </body>
 
 </html>
