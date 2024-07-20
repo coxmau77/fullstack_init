@@ -8,6 +8,7 @@ mi-proyecto/
 │   │   ├── css/
 │   │   │   └── style.css
 │   │   ├── images/
+│   │   │   └── logo.png
 │   │   └── js/
 │   │       ├── login.js
 │   │       └── signup.js
@@ -17,7 +18,6 @@ mi-proyecto/
 │   ├── utils/
 │   │   └── helpers.js 
 │   └── index.html
-│    
 ├── src/
 │   ├── config/
 │   │   └── config.js
