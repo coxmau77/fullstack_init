@@ -7,6 +7,8 @@
     <title>Página Principal</title>
     <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <script defer src="/assets/js/login.js"></script>
+    <script defer src="/assets/js/signup.js"></script>
 </head>
 
 <body>
@@ -38,6 +40,38 @@
             <a href="https://linkedin.com/in/tu-perfil" target="_blank">LinkedIn</a>
         </p>
     </footer>
+
+    <!-- Login Dialog -->
+    <dialog id="loginDialog">
+        <form method="dialog" id="loginForm">
+            <h2>Iniciar Sesión</h2>
+            <label for="loginEmail">Correo Electrónico:</label>
+            <input type="email" id="loginEmail" required>
+            <label for="loginPassword">Contraseña:</label>
+            <input type="password" id="loginPassword" required>
+            <button type="submit">Iniciar Sesión</button>
+            <button type="button" id="closeLoginDialog">Cancelar</button>
+        </form>
+    </dialog>
+    
+    <!-- Signup Dialog -->
+    <dialog id="signupDialog">
+        <form method="dialog" id="signupForm">
+            <h2>Registrarse</h2>
+            <label for="signupName">Nombre:</label>
+            <input type="text" id="signupName" required>
+            <label for="signupEmail">Correo Electrónico:</label>
+            <input type="email" id="signupEmail" required>
+            <label for="signupDob">Fecha de Nacimiento:</label>
+            <input type="date" id="signupDob" required>
+            <label for="signupPassword">Contraseña:</label>
+            <input type="password" id="signupPassword" required>
+            <label for="signupConfirmPassword">Repetir Contraseña:</label>
+            <input type="password" id="signupConfirmPassword" required>
+            <button type="submit">Registrarse</button>
+            <button type="button" id="closeSignupDialog">Cancelar</button>
+        </form>
+    </dialog>
 </body>
 
 </html>

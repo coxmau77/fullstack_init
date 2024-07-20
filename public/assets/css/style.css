@@ -45,3 +45,29 @@ footer {
     padding: 10px;
     text-align: center;
 }
+
+dialog {
+    border: none;
+    padding: 20px;
+    width: 300px;
+}
+
+dialog form {
+    display: flex;
+    flex-direction: column;
+}
+
+dialog label {
+    margin: 10px 0 5px;
+}
+
+dialog input {
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+dialog button {
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
