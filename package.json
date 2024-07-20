@@ -1,0 +1,25 @@
+{
+  "name": "my-proyect",
+  "version": "0.0.0",
+  "description": "Proyecto fullstack con Node.js, EJS, JavaScript, HTML y CSS",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "2.4.3",
+    "body-parser": "1.19.0",
+    "cors": "2.8.5",
+    "dotenv": "16.0.3",
+    "ejs": "3.1.8",
+    "express": "4.18.2",
+    "jsonwebtoken": "8.5.1",
+    "mongoose": "6.7.0",
+    "moment": "2.30.1",
+    "moment-timezone": "0.5.45"
+  },
+  "author": "Mauricio Cox",
+  "license": "MIT"
+}
