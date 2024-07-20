@@ -18,15 +18,15 @@ const __dirname = path.resolve();
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Ruta principal
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public/index.html'));
+app.get('/', (request, response) => {
+    response.sendFile(path.join(__dirname, 'public/index.html'));
 });
 
 // Conectar a la base de datos MongoDB y al servidor
 mongoose.connect(DB_URI).
     then(() => {
         app.listen(PORT, () => {
-            console.log(`*************************************************\n Servidor en ejecución en http://localhost:${PORT} y conexión a la base de datos. \n*************************************************`);
+            console.log(`*************************************************\n Servidor en ejecución en http://localhost:${PORT} \n Conexión a la base de datos: mongoDB \n*************************************************`);
         });
     })
-    .catch(error => console.log(error));
+    .catch(error => console.log("Error >>> ",error));
