@@ -1,7 +1,7 @@
 {
   "name": "my-proyect",
   "version": "0.0.0",
-  "description": "fullstack_init Proyecto fullstack con Node.js, EJS, JavaScript, HTML y CSS",
+  "description": "fullstack_init Proyecto fullstack con Node.js, mongoDB, JavaScript, HTML y CSS",
   "main": "server.js",
   "type": "module",
   "scripts": {
