@@ -6,10 +6,10 @@ dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+const __dirname = path.resolve();
 
-// Configurar EJS como el motor de plantillas
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'src', 'views'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 // Configurar la carpeta pública para archivos estáticos
 app.use(express.static(path.join(__dirname, 'public')));
@@ -21,5 +21,5 @@ app.get('/', (req, res) => {
 
 // Iniciar el servidor
 app.listen(PORT, () => {
-    console.log(`Servidor escuchando en el puerto ${PORT}`);
+    console.log(`*************************************************\n Servidor en ejecución en http://localhost:${PORT} \n*************************************************`);
 });
