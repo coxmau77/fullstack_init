@@ -23,4 +23,3 @@ export const register = async ({ name, email, dob, age, password }) => {
     await user.save();
     return user;
 };
-

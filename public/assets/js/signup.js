@@ -1,4 +1,5 @@
-// assets/js/signup.js
+// src/assets/js/signup.js
+
 document.addEventListener('DOMContentLoaded', () => {
     const signupDialog = document.getElementById('signupDialog');
     const signupBtn = document.getElementById('signupBtn');
@@ -62,24 +63,24 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         try {
-            const response = await fetch('/api/auth/register', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ name, email, dob, age, password })
+            const response = await axios.post('/api/auth/register', {
+                name,
+                email,
+                dob,
+                age,
+                password
             });
 
-            const data = await response.json();
-            if (response.ok) {
+            if (response.status === 201) {
                 alert('Registro exitoso');
+                signupForm.reset();
                 signupDialog.close();
             } else {
-                alert(data.message || 'Error en el registro');
+                alert(response.data.message || 'Error en el registro');
             }
         } catch (error) {
             console.error('Error:', error);
-            alert('Error en el registro');
+            alert(error.response?.data?.message || 'Error en el registro');
         }
     });
 
