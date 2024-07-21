@@ -1,3 +1,5 @@
+// src/assets/js/login.js
+
 document.addEventListener('DOMContentLoaded', () => {
     const loginDialog = document.getElementById('loginDialog');
     const loginBtn = document.getElementById('loginBtn');
